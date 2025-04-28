@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biker-zone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body>
+    <header class="py-2 relative" style="background-color: rgba(38, 70, 83, 1)">
+        <div class="container mx-auto w-3/4 flex justify-end">
+            <nav >
+                <button class="text-white mb-4 sm:hidden" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <ul id="menu" class="absolute text-white text-lg  space-y-6 w-full top-full right-0 text-center hidden sm:block sm:relative sm:top-0 sm:flex" style="background-color: #264653">
+                    <li class="sm:mb-3 ml:6"><a href="#">Home</a></li>
+                    <li class="sm:mb-0 sm:ml-6"><a href="#">Shop</a></li>
+                    <li class="sm:mb-0 sm:ml-6"><a href="#">Contact</a></li>
+                    <li class="sm:mb-0 sm:ml-6"><a href="#">News</a></li>
+                    <li class="m-1 sm:mb-0 sm:ml-6"><a class="px-8 py-2 rounded-md" style="background-color: rgba(231, 111, 81, 1);" href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
